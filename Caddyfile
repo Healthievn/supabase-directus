@@ -1,0 +1,34 @@
+# https://start2learning.com {
+#   reverse_proxy 170.205.36.238:5173
+# }
+
+http://start2learning.com {
+  respond /health-check 200
+	respond "Hello, world!"
+}
+# https://api.start2learning.com {
+#   reverse_proxy 170.205.36.238:3002
+# }
+
+# https://dashboard.start2learning.com {
+#   reverse_proxy 170.205.36.238:5174
+# }
+
+# https://app.start2learning.com {
+#   reverse_proxy 170.205.36.238:5174
+# }
+https://admin.start2learning.com {
+  reverse_proxy directus:8055
+}
+
+https://expo.start2learning.com {
+  reverse_proxy 170.205.36.238:8081
+}
+
+https://supabase.start2learning.com {
+  reverse_proxy kong:54321
+}
+https://start2learning.com {
+  respond /health-check 200
+	respond "Hello, world!"
+}
